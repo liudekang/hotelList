@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/libs/swiper-4.1.6/css/swiper.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + "px";
+    </script>
+</head>
+
+<body>
+    <!-- <button id="btn">点我呀</button> -->
+    <div class="wrap">
+        <header>热点</header>
+        <section>
+            <div>
+                <div class="swiper-container parent">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./img/1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/2.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/3.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/4.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/5.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/6.jpg" alt=""></div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination page"></div>
+                    <!-- 如果需要导航按钮
+                            <div class="swiper-button-prev prev"></div>
+                            <div class="swiper-button-next next"></div>
+                            如果需要滚动条
+                            <div class="swiper-scrollbar bar"></div> -->
+                </div>
+                <div class="inner">
+                    <div>
+                        <h3>重磅热播</h3>
+                        <div class="in">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <script id="list" type="text/x-handlebars-template">
+        {{#each list}}
+        <dl>
+            <dt><img src="./img/{{img}}" alt=""></dt>
+            <dd>
+                <p>{{tlt}}</p>
+            </dd>
+        </dl>
+        {{/each}}
+    </script>
+    <script src="js/libs/require.js" async="true" defer data-main="js/main"></script>
+</body>
+
+</html>
